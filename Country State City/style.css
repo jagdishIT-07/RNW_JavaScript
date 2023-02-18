@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 30vh;
+    left: 20vw;
+
+}
+
+select {
+    height: 30px;
+    border-radius: 10px;
+}
+
+body {
+    background-color: aquamarine;
+    font-family: popins, sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+}

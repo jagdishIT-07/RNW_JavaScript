@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #03042C;
+            background-repeat: initial;
+            color: white;
+        }
+
+        h3 {
+            color: rgb(13, 12, 12);
+            font-weight: 700;
+            font-size: 45px;
+            position: relative;
+            left: 480px;
+            border-radius: 50%;
+            height: 60px;
+            width: 500px;
+            background-color: yellow;
+            transition: 2s;
+        }
+        
+        h3:hover{
+            transform:scale(2px,2px);
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-property: all;
+            height: 80px;
+            width: 550px;
+            box-shadow: 0 25px 50px #EEEB18;
+        }
+        p {
+            font-weight: bold;
+            font-size: 35px;
+        }
+
+        input {
+            width: 250px;
+            height: 50px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+
+        select {
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+
+        .btn1 {
+            position: absolute;
+            top: 45%;
+            left: 40%;
+            background-color: #03042C;
+            color: white;
+            font-size: 30px;
+            font-family: sans-serif;
+            box-shadow: 0px 25px 50px rgba(0,0,0,1);
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            transform: translate(-50,-50);
+            cursor: pointer;
+            overflow: hidden;
+            transition: 2s;
+        }
+        .btn1:before{
+            content: '';
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        .btn1 span:nth-child(1)
+        {
+            position:absolute;
+            top: 0px;
+            left: 0px;
+            width:100%;
+            height:2px;
+            background: linear-gradient(to right, #0c002b, #1779ff);
+            animation: anim1 2s linear infinite;
+            
+        } 
+        @keyframes anim1{
+            0% { 
+                transform: translateX(-100%) 
+               }
+            100%{
+                 transform: translateX(100%)
+                }
+        }
+        .btn1 span:nth-child(2)
+        {
+            position:absolute;
+            top: 0px;
+            right: 0px;
+            width:2px;
+            height:100%;
+            background: linear-gradient(to bottom, #0c002b, #1779ff);
+            animation: anim2 2s infinite;
+            animation-delay: 1s;
+        }
+        @keyframes anim2{
+            0%{
+                transform: translateY(-100%);
+            }
+            100%{
+                transform: translateY(100%);
+            }
+        }
+        .btn1 span:nth-child(3)
+        {
+            position:absolute;
+            left: 0px;
+            bottom: 0px;
+            width:100%;
+            height:2px;
+            background: linear-gradient(to left, #0c002b, #1779ff);
+            animation: anim3 2s infinite;
+        }
+        @keyframes anim3
+        {
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        .btn1 span:nth-child(4)
+        {
+            position:absolute;
+            bottom: 0px;
+            left: 0px;
+            width:2px;
+            height:100%;
+            background: linear-gradient(to top, #0c002b, #1779ff);
+            animation: anim4 2s infinite;
+            animation-delay: 1s;
+        }
+        @keyframes anim4
+        {
+            0%{
+                transform: translateY(100%);
+            }
+            100%{
+                transform: translateY(-100%);
+            }
+        }
+        .btn1:hover {
+            animation: none;
+            border: none;
+            background: #EEEB18;
+            box-shadow: 0 25px 50px #EEEB18;
+            color: black;
+        }
+        .btn1:hover span{
+            background: #EEEB18;
+            animation: none;
+        }
+        #result{
+            position: absolute;
+            top: 60%;
+            left: 45%;
+            color: white;
+            box-shadow:0 25px 50px black;
+            transition: 1s;
+        }
+        #result:hover {
+            font-size: 40px;
+            font-weight: 700;
+            box-shadow: 0 25px 50px white;
+            transition-duration: 2s;
+        }
+        @keyframes changeradius{
+            10%{background-color: red; border-radius: 0%;color: green;}
+            20%{background-color: green; border-radius: 10%;color: red;}
+            30%{background-color: yellow; border-radius: 20%;color: pink;}
+            40%{background-color: pink; border-radius: 30%;color: brown;}
+            50%{background-color: brown; border-radius: 40%;color: yellow;}
+            60%{background-color: red; border-radius: 50%;color: green;}
+            70%{background-color: green; border-radius: 40%;color: red;}
+            80%{background-color: yellow; border-radius: 30%;color: pink;}
+            90%{background-color: pink; border-radius: 20%;color: brown;}
+            100%{background-color: brown; border-radius: 10%;color: yellow;}
+        }
+        #first{
+            position: relative;
+            left: 10%;
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+            padding-top: 100px;
+            font-style: italic;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            animation-timing-function: linear;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-name: changeradius;
+        }
+    </style>
+    <script>
+        function f1() {
+            var n1 = parseInt(document.getElementById('n1').value);
+            var n2 = parseInt(document.getElementById('n2').value);
+            c = document.getElementById('calc').value;
+            switch (c) {
+                case '+':
+                    var n3 = n1 + n2;
+                    document.getElementById('result').innerHTML = n1 + " + " + n2 + " = " + n3;
+                    break;
+                case '-':
+                    var n3 = n1 - n2;
+                    document.getElementById('result').innerHTML = n1 + " - " + n2 + " = " + n3;
+                    break;
+                case '*':
+                    var n3 = n1 * n2;
+                    document.getElementById('result').innerHTML = n1 + " * " + n2 + " = " + n3;
+                    break;
+                case '/':
+                    var n3 = n1 / n2;
+                    document.getElementById('result').innerHTML = n1 + " / " + n2 + " = " + n3;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3><u>Basic Calculator</h3></u></h3>
+    <input type="number" placeholder="Enter First Number *" name="n1" id="n1" required>&nbsp;
+    <input type="number" placeholder="Enter Second Number *" name="n2" id="n2" required>&nbsp;
+    <br><br>
+    <p style="font-size: 20px;">Select Operation : </p>&nbsp;<select name="operations" id="calc">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select><br><br>
+    <button class="btn1" onclick="f1()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Check Result</button>
+    <p id="result">
+    </p>
+    <div id="first">
+        Jagdish
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <h2>Student Management System</h2>
+    </center>
+    <table>
+        <tr>
+            <!-- Column-1 start -->
+            <td class="stdform" id="stdform">
+                <form action="">
+                    <h4>Student Form</h4>
+                    <!-- div-1 -->
+                    <div>
+                        <label for="">Full Name</label>
+                        <!-- username validation error -->
+                        <label for="" id="usernamevalidationerror" class="usernamevalidationerror">This field is
+                            required</label>
+                        <!-- input username -->
+                        <input type="text" id="username" name="username" placeholder="Enter the user name">
+                    </div>
+                    <!-- div-2 -->
+                    <div>
+                        <label for="">Rollno</label>
+                        <!-- rollno validation error -->
+                        <label for="" id="rollnovalidationerror" class="rollnovalidationerror">This field is
+                            required</label>
+                        <!-- input rollno -->
+                        <input type="text" id="rollno" name="rollno" placeholder="Enter the rollno">
+                    </div>
+                    <!-- div-3 -->
+                    <div>
+                        <label for="">Student Class</label>
+                        <!-- username validation error -->
+                        <label for="" id="studentclassvalidationerror" class="studentclassvalidationerror">This field is
+                            required</label>
+                        <!-- input username -->
+                        <input type="text" id="studentclass" name="studentclass" placeholder="Enter the student class">
+                    </div>
+                    <!-- div-1 -->
+                    <div>
+                        <label for="">Total Subjects</label>
+                        <!-- username validation error -->
+                        <label for="" id="totalsubjectsvalidationerror" class="totalsubjectsvalidationerror">This field
+                            is required</label>
+                        <!-- input username -->
+                        <input type="number" id="totalsubjects" name="totalsubjects" placeholder="Enter user name">
+                    </div>
+                    <!-- div-1 -->
+                    <div>
+                        <label for="">Age</label>
+                        <!-- username validation error -->
+                        <label for="" id="useragevalidationerror" class="useragevalidationerror">This field is
+                            required</label>
+                        <!-- input username -->
+                        <input type="number" id="userage" name="username" placeholder="Enter the user age" min="1">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <!-- Column-1 End -->
+            <!-- Column-2 Start-->
+            <td>
+                <!-- nesetd table -->
+                <table class="list" id="stdlist" style="background-color: #C2976D;">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Roll no</th>
+                            <th>Class</th>
+                            <th>Total Subjects</th>
+                            <th>Age</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+            <!-- Column-2 End-->
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="currentDate"></p>
+    <p id="currentTime"></p>
+    <p id="currentMonth"></p>
+    <p id="currentYear"></p>
+    <p id="currentMinute"></p>
+    <p id="currentSecond"></p>
+    <p id="currentFullDate"></p>
+    <script>
+        var date = new Date();
+        document.getElementById('currentDate').innerHTML = "Current Date is :" + date.getDate();
+        document.getElementById('currentTime').innerHTML = "Current Time is :" + date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+        document.getElementById('currentMonth').innerHTML = "Current Month is :" + date.getMonth();
+        document.getElementById('currentYear').innerHTML = "Current Year is :" + date.getFullYear();
+        document.getElementById('currentMinute').innerHTML = "Current Minute is :" + date.getMinutes();
+        document.getElementById('currentSecond').innerHTML = "Current Second is :" + date.getSeconds();
+        document.getElementById('currentFullDate').innerHTML = "Current FullDate is :" + date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear();
+
+
+    </script>
+</body>
+
+</html>

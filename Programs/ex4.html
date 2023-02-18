@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 4</title>
+        <script>
+            // IndexOf 
+            var str = 'Welcome to all in my new business';
+            var s1 = str.indexOf('to');
+            document.write("index is :"+s1);
+            s1 = str.indexOf('my');
+            document.write("<br>index is :"+s1);
+
+            // Shift function
+            // shift function returns deleted elements
+            var students = ['Yash','Sonu','Rohit'];
+            document.write("<br>"+students.shift()+" is shifted");
+            document.write("<br>"+students.shift()+" is shifted");
+
+            // UnShift function
+            // Unshift function adds elements at the beginning of the array
+            var students = ['Yash','Sonu','Rohit'];
+            students.unshift('Ramesh');
+            document.write("<br>"+students+" is unshifted");
+            students.unshift('Kaushal');
+            document.write("<br>"+students+" is unshifted");
+        </script>
+</head>
+<body>
+    <p id="Shift"></p>
+</body>
+</html>

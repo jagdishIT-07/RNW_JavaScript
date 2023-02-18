@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <script>
+        class Employee {
+
+            addition() {
+                var sum = this.x + this.y;
+                sum();
+            }
+            sum() {
+                document.write(this.x, " + ", this.y, " = ", this.z);
+            }
+        }
+        class Manager extends Employee {
+            y = 0;
+            x = 0;
+
+            //   Default Constructor
+            //  constructor() {
+            //     this.x = 0;
+            //     this.y = 0;
+            // }
+
+            // Parameterized Constructor
+            constructor(a, b) {
+                this.x = a;
+                this.y = b;
+                
+            }
+            display() {
+                alert("hi");
+                document.write("x = ", this.x, " , y = ", this.y);
+            }
+        }
+        let emp1 = new Manager(10, 20);
+        emp1.display();
+        // emp1.addition();
+    </script>
+</head>
+<body>
+</body>
+
+</html>

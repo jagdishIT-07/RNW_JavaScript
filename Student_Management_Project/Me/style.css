@@ -1,0 +1,59 @@
+body >table{
+    width: 100%;
+}
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+table.list{
+    text-align: center;
+    width: 100%;
+}
+table.list td{
+    text-align: center;
+}
+td,th{
+    text-align: left;
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: skyblue;
+}
+input[type=text], input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0px 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+input[type=submit]{
+    color: black;
+    margin: 8px 0;
+    height: 40px;
+    width: 150px;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+}
+form{
+    background-color: skyblue;
+    padding: 10px;
+}
+form div.form-action-buttons{
+    text-align: center;
+}
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+.hide{
+    display:none;
+}

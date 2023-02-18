@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript LocalStrorage</title>
+    <script>
+        // setItem in localStorage
+        var key = prompt("Enter a key which u want to store in localstorage");
+        var value = prompt("Enter a value of key which u want to store in localstorage");
+        localStorage.setItem(key, value);
+
+        // getItem in localStorage
+        document.write(localStorage.getItem('color'));
+        document.write("<br>"+localStorage.getItem('fname'));
+
+        // removeItem in LocalStorage
+        // localStorage.removeItem('fname');
+
+        // clear mean all properties are removed
+        // localStorage.clear();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

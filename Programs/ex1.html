@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-1</title>
+    <script>
+        function add()
+        {
+            var arr = [];
+            var n = document.getElementById('total').value;
+            for(var i=0; i < n; i++){
+                var val = prompt("Enter a value on index no. "+i);
+                arr[i] = val;
+            }
+            document.write(arr);
+        }
+
+    </script>
+</head>
+<body>
+       Enter the total number of elements which u want to add<input type="number" id="total">
+       <input type="button" value="Go" onclick = "add()" id="btn">
+</body>
+</html>

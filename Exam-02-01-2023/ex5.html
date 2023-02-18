@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Value index print</title>
+    <script>
+        function largest()
+        {
+            var arr1 = [10,26,35,89,48,42,14,595];
+            var max = arr1[0];
+            var len = arr1.length;
+            for( var i=1; i < len; i++)
+            {
+                if(max < arr1[i])
+                {
+                    max = arr1[i];
+                }
+            }
+            
+            // alert(max)
+            for( var j=0; j< len; j++)
+            {
+                if(max == arr1[j])
+                {
+                    alert("maximum value "+max+" is at index no. "+j);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Go" onclick="largest()">
+    </form>
+    
+</body>
+</html>

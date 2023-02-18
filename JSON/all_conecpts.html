@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - All Concepts</title>
+</head>
+
+<body>
+    <script>
+        // Javascript Arrays
+        // let name = ["jagdish", "kiran", "Jaydeep"];
+
+        //we can also execute this elements of array using index value like,
+        // console.log(name);
+        // console.log(name[1]);
+// ----------------------------------------------------------------------------------------------------------------
+        // Javascript objects -> It has a key-pair value, where key hasn't declare in single or double quote
+        // let objData = { fname: "Thakor", lname: "Jagdish", place: "Vadnagar" };
+
+        //we can also execute this elements of objects using .(dot) like,
+        // console.log(objData);
+        // console.log(objData.fname);
+        // console.log(objData.lname);
+        // console.log(objData.place);
+
+// ----------------------------------------------------------------------------------------------------------------
+
+
+        // Javascript JSON data -> It has also a key-pair value, where key and value must declare in double quotes
+        // let jsonData = { "fname": "Thakor", "lname": "Jagdish", "place": "Vadnagar" };
+
+        //we can't execute this elements of JSON using .(dot) or index value like,
+        // If we can execute this elements then it has two mathods
+
+        // 1) stringify() method :- to convert the Javascript object to JSON string
+        // var jsonobj = JSON.stringify(jsonData);
+        // console.log(jsonobj);
+
+        // 2) parse() method :- to convert the JSON string to Javascript object
+        // var jsonstr = JSON.parse(jsonobj);
+        // console.log(jsonstr);
+
+// ----------------------------------------------------------------------------------------------------------------
+
+
+        // Array of objects
+        // var obj = [
+        //     {fname: "Thakor", lname: "Jagdish", place: "Vadnagar"},
+        //     {fname: "Chauhan", lname: "Jaydeep", place: "USA"},
+        //     {fname: "Parmar", lname: "Riya", place: "Sultanpur"}
+        // ]
+        // console.log(obj[1].lname);
+        // console.log(obj[2]['place']);
+        
+        //         // ----- or -----
+        // console.log(obj[2].place);
+
+// ----------------------------------------------------------------------------------------------------------------
+
+        // var data = {
+        //     place : ["vadnagar","sultanpur","Bangalore"],
+        //     color: ["green","blue","red"]
+        // }
+        // console.log(data);
+        // console.log(data.place);
+        // console.log(data.place[0]);
+        // console.log(data.place[1]);
+        // console.log(data.place[2]);
+        // // -------------------------
+        // console.log(data.color);
+        // console.log(data.color[1]);
+        // console.log(data.color[2]);
+// ----------------------------------------------------------------------------------------------------------------
+
+            // JSON datatypes
+            // 1.string
+            // 2.int
+            // 3.object
+            // 4.array
+            // 5.Boolean
+            // 6.null
+    // ------------------------------------------------
+    // [1] String datatype :- it means key and value both are in the form of string
+    // let jsonStr = {"fname" : "Thakor","lname" : "Jagdish", "place" : "Vadnagar"};
+    // // directly we cann't acces the json , firstly we can convert into JS string using stringify method
+    // let jsonObj = JSON.stringify(jsonStr);
+    // console.log(jsonObj);
+
+    // // // then we can convert JS string to object for accesing the elements
+    // let jsonObj1 = JSON.parse(jsonObj);
+    // console.log(jsonObj1);
+    // console.log(jsonObj1.place);
+
+
+    // ------------------------------------------------
+    // [2] int datatype :- it means value is writen  in the form of integer
+    // let  jsonStr = {"fname" : "Thakor","lname":"Jagdish","age":22};
+    // let jsonObj = JSON.stringify(jsonStr);
+    // console.log(jsonObj);
+
+    // let jsonObj1 = JSON.parse(jsonObj);
+    // console.log(jsonObj1);
+    // console.log(jsonObj1.age);
+
+    // ------------------------------------------------
+    // [3] object datatype :- 
+    // let obj = {fname:"Thakor", lname:"Jagdish", place:"Vadnagar"};
+    // console.log(obj);
+    // console.log(obj.fname);
+    // console.log(obj.lname);
+    // console.log(obj.place);
+
+    // ------------------------------------------------
+    // [4] array datatype :-
+    // let obj = {
+    //     fname:"Thakor",
+    //     lname:"Jagdish",
+    //     color:["red","green","white"]
+    // }
+    // console.log(obj);
+    // console.log(obj.fname);
+    // console.log(obj.lname);
+    // console.log(obj.color[1]);
+    
+    // ------------------------------------------------
+    // [5] Boolean datatype :-
+    // let obj = {
+    //     fname:"Thakor",
+    //     lname:"Jagdish",
+    //     completed:true,
+    //     eligible_vote:false
+    // }
+    // console.log(obj);
+    // console.log(obj.completed);
+    // console.log(obj.eligible_vote);
+
+    // ------------------------------------------------
+    // [6] null datatype :-
+    // let obj = {
+    //     fname:"Thakor",
+    //     lname:"Jagdish",
+    //     arr:null //it means in this arr is empty nothing else in this
+    // }
+    // console.log(obj);
+    // console.log(obj.arr);
+
+
+// ----------------------------------------------------------------------------------------------------------------
+
+        // --------------- JSON LocalStorage -----------------
+        // 1) setItem
+        localStorage.setItem("fname","Thakor");
+        localStorage.setItem("lname","Jagdish");
+        // 2) getItem
+        let fn = localStorage.getItem("fname");
+        let ln = localStorage.getItem("lname");
+
+        console.log("fname : "+fn);
+        console.log("lname : "+ln);
+
+
+    </script>
+</body>
+
+</html>

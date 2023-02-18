@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function multiplication_table()
+        {
+            var n = document.getElementById("n1").value;
+            for(var i=1; i<=10; i++)
+            {
+                document.writeln(n+" x "+i+" = "+n*i+"<br>");
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        Enter any number :<input type="number" name="n1" id="n1">
+        <input type="button" value="Go" onclick="multiplication_table()">
+    </form>
+</body>
+</html>

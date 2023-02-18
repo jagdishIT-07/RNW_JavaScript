@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnMouse Events</title>
+    <script>
+        function OnMouseOver()
+        {
+            document.body.style.backgroundColor="green";
+        }
+        function OnMouseOut()
+        {
+            document.body.style.backgroundColor="brown";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="OnMouseOver" onmouseover="OnMouseOver()">
+    <input type="button" value="OnMouseOver" onmouseout="OnMouseOut()">
+</body>
+</html>
